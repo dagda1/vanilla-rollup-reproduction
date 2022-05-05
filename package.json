@@ -1,0 +1,101 @@
+{
+  "name": "vanilla-rollup-reproduction",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dagda1/cuttingedge.git"
+  },
+  "module": "dist/esm/index.js",
+  "sideEffects": [
+    "*.css"
+  ],
+  "types": "dist/esm/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "@cutting/util": "^4.51.0",
+    "@vanilla-extract/sprinkles": "1.4.0",
+    "assert-ts": "^0.3.4",
+    "classnames": "^2.3.1",
+    "dedent": "0.7.0",
+    "deepmerge": "^4.2.2",
+    "polished": "4.2.2"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.17.9",
+    "@capsizecss/core": "3.0.0",
+    "@capsizecss/vanilla-extract": "1.0.0",
+    "@cutting/eslint-config": "^4.40.1",
+    "@cutting/tsconfig": "^4.37.1",
+    "@cutting/useful-types": "^4.36.1",
+    "@rbnlffl/rollup-plugin-eslint": "3.0.0",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/babel__core": "7.1.19",
+    "@types/dedent": "0.7.0",
+    "@types/node": "^16.11.33",
+    "@types/mdx-js__react": "1.5.5",
+    "@types/react": "18.0.8",
+    "@types/react-dom": "18.0.3",
+    "@types/tailwindcss": "3.0.10",
+    "@vanilla-extract/babel-plugin": "1.1.6",
+    "@vanilla-extract/css": "1.7.0",
+    "@vanilla-extract/rollup-plugin": "^1.0.1",
+    "jest": "^28.0.3",
+    "autoprefixer": "10.4.7",
+    "csstype": "3.0.11",
+    "eslint": "8.14.0",
+    "node-fetch": "3.2.4",
+    "postcss": "8.4.13",
+    "postcss-url": "^10.1.3",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-router": "6.3.0",
+    "rollup": "^2.71.1",
+    "rollup-plugin-postcss": "4.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "serve-handler": "6.1.3",
+    "tailwindcss": "3.0.24",
+    "typescript": "4.6.4",
+    "webpack": "^5.72.0"
+  },
+  "peerDependencies": {
+    "react": ">= 18.x.x",
+    "react-dom": ">= 18.x.x",
+    "react-router": ">= 6.x.x"
+  },
+  "volta": {
+    "node": "16.15.0",
+    "pnpm": "6.32.9"
+  },
+  "scripts": {
+    "all": "pnpm install && pnpm build",
+    "build": "rollup -c",
+    "lint": "eslint ./index/**/*.{ts,tsx} --fix"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/esm/index.d.ts"
+      ]
+    }
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/core@<7.17.8": ">=7.17.8",
+      "@babel/types@<7.17.0": ">=7.17.3",
+      "ansi-regex@>2.1.1 <5.0.1": ">=5.0.1",
+      "acorn@<8.7.0": ">=8.7.0"
+    }
+  }
+}

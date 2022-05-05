@@ -1,0 +1,9 @@
+{
+  "extends": "@cutting/tsconfig",
+  "compilerOptions": {
+    "outDir": "dist/esm",
+    "baseUrl": "./src",
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "test/**/*.ts", "test/**/*.tsx", "setupTests.ts"]
+}

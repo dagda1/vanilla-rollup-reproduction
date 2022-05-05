@@ -1,0 +1,15 @@
+# vanilla-rollup-reproduction
+
+## Steps to reproduce
+
+```bash
+pnpm all
+```
+
+Look at [./dist/components/atoms/Button/Button/css.vanila.js](./dist/components/atoms/Button/Button/css.vanila.js).
+
+It contains an import like:
+
+```js
+import"capsize/packages/vanilla-extract/src/capsize.css.ts.vanilla.css?source=LmNhcHNpemVfY2Fwc2l6ZVN0eWxlX18xZDBnOXFrNCB7CiAgZm9udC1zaXplOiB2YXIoLS1mb250U2l6ZV9fMWQwZzlxazApOwogIGxpbmUtaGVpZ2h0OiB2YXIoLS1saW5lSGVpZ2h0X18xZDBnOXFrMSk7Cn0KLmNhcHNpemVfY2Fwc2l6ZVN0eWxlX18xZDBnOXFrNDo6YmVmb3JlIHsKICBjb250ZW50OiAnJzsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1jYXBIZWlnaHRUcmltX18xZDBnOXFrMik7CiAgZGlzcGxheTogdGFibGU7Cn0KLmNhcHNpemVfY2Fwc2l6ZVN0eWxlX18xZDBnOXFrNDo6YWZ0ZXIgewogIGNvbnRlbnQ6ICcnOwogIG1hcmdpbi10b3A6IHZhcigtLWJhc2VsaW5lVHJpbV9fMWQwZzlxazMpOwogIGRpc3BsYXk6IHRhYmxlOwp9";
+```
